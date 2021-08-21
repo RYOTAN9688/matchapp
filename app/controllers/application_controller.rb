@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-before_action : configure_premitted_parameters, if; devise_controller?
+before_action :configure_premitted_parameters, if:  :devise_controller?
 
 protected
 
