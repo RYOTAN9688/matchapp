@@ -1,19 +1,15 @@
-.sign-up-page {
+.sign-in-page {
   max-width: 360px;
   margin: 8px auto 0;
 }
 
-.btn-light {
-  color: #616161;
-}
-
-.sign-up_submit-btn {
+.sign-in_submit-btn {
   background-color: #fd3378;
   height: 38px;
 }
 
 @media (max-width: 480px) {
-  .sign-up-page {
+  .sign-in-page {
     max-width: initial;
   }
   .card {
