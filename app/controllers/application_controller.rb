@@ -8,7 +8,9 @@ def configure_premitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys:[:name,:gender])
 
     devise_parameter_sanitizer.permit(:account_update,
-    keys:[:name,:self_introduction])
+    keys:[:name,:self_introduction,:profile_image])
+
+  
 end    
 
 end
