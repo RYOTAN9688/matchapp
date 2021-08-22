@@ -24,6 +24,8 @@ gem 'devise'
 
 gem 'carrierwave', '~>2.0'
 
+gem 'mini_magick'
+
 group :development, :test do
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
