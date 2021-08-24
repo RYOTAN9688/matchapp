@@ -9,4 +9,6 @@ root 'top#index'
 resources :users, only: [:show, :index]
 
 resources :reactions, only: [:create]
+
+resources :macthing, only: [:index]
 end
