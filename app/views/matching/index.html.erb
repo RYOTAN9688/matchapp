@@ -1,0 +1,9 @@
+<%#条件式が偽の場合に処理を実行する制御構文%>
+<%#　@match_usersが空でないときにマッチングしたユーザを表示%>
+<% unless @match_users.empty? %>
+<ul>
+    <% @match_users.each do |user| %>
+    <li><%= user.name %></li>
+    <% end %>
+</ul>
+<% end %>

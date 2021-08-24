@@ -10,5 +10,5 @@ resources :users, only: [:show, :index]
 
 resources :reactions, only: [:create]
 
-resources :macthing, only: [:index]
+resources :matching, only: [:index]
 end
