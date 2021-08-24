@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_22_022919) do
+ActiveRecord::Schema.define(version: 2021_08_24_081133) do
+
+  create_table "reactions", force: :cascade do |t|
+    t.integer "to_user_id", null: false
+    t.integer "from_user_id", null: false
+    t.integer "status", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["from_user_id"], name: "index_reactions_on_from_user_id"
+    t.index ["to_user_id"], name: "index_reactions_on_to_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,4 +38,6 @@ ActiveRecord::Schema.define(version: 2021_08_22_022919) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "reactions", "users", column: "from_user_id"
+  add_foreign_key "reactions", "users", column: "to_user_id"
 end

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :reactions
+end
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -6,7 +8,7 @@ class User < ApplicationRecord
 
 validates :name, presence: true  
 validates :self_introduction, length: { maximum: 500 }     
-enum gender: {  男性: 0, 女性: 1}
+enum gender: {  man: 0, woman: 1}
 
  mount_uploader :profile_image, ProfileImageUploader
 
