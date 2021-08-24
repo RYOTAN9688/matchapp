@@ -1,5 +1,6 @@
 //yarnでインストールしたbootstrapのパッケージを利用できるようにする
 import 'bootstrap'
+import 'hammerjs'
 import '../stylessheets/application'
 import '@fortawesome/fontawesome-free/js/all';
 // This file is automatically compiled by Webpack, along with any other files
@@ -13,6 +14,8 @@ require("@rails/activestorage").start()
 require("channels")
 //プロフィール画像をアップロードできるようになる
 require("src/profile_image_upload")
+
+require("src/swipe")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
