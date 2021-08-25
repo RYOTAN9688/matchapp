@@ -25,6 +25,6 @@ class ChatRoomsController < ApplicationController
         #@chat_roomにいる自分ではないユーザー（自分とマッチングしたユーザー）の情報を取得
         @chat_room_users = @chat_room.chat_room_users.where.not(user_id: current_user.id).first.user
         #アクセスしたチャットルームのチャットメッセージを取得
-        @chat_message = ChatMessage.where(chat_room: @chat_room)
+        @chat_messages = ChatMessage.where(chat_room: @chat_room)
     end
 end
