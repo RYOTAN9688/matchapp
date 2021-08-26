@@ -24,7 +24,7 @@ const appChatRoom = consumer.subscriptions.create("ChatRoomChannel", {
 //チャットルームページかどうかを確かめ、現在のページURLのパスを参照する
 if(/chat_rooms/.test(location.pathname))  {
     //フォーム内でenterキーを押したときの処理を実行
-  $(document).on("keydown", ".chat-room__message-form_textarea", function(e) {
+  $(document).on("keydown", ".chat_room_message-form_textarea", function(e) {
     if(e.key === "Enter"){
       //chat_room_idを取得し、appChatRoomのspeakアクションにchat_room_idを
       //引数として渡す
